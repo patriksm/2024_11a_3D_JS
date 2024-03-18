@@ -1,0 +1,20 @@
+#container {
+    position: absolute;
+    height: 800px;
+    width: 1200px;
+    border: 2px solid violet;
+}
+
+#world {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+}
+
+#element1 {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: green;
+    opacity: 0.8;
+}

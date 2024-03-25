@@ -13,30 +13,3 @@
     transform-style: preserve-3d;
     transform: translate3d(300px, 100px, 0px);
 }
-
-#element1 {
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    background: green;
-    opacity: 0.8;
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
-}
-
-#element2 {
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    background: red;
-    opacity: 0.8;
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)  translate3d(0px, 0px, -200px);
-}
-
-#element3 {
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    background: blue;
-    opacity: 0.8;
-    transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg) translate3d(0px, -100px, -100px);
-}

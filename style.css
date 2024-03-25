@@ -4,6 +4,7 @@
     width: 1200px;
     border: 2px solid violet;
     perspective: 600px;
+    overflow: hidden;
 }
 
 #world {
@@ -11,5 +12,5 @@
     height: inherit;
     width: inherit;
     transform-style: preserve-3d;
-    transform: translate3d(300px, 100px, 0px);
+    /* transform: translate3d(500px, 300px, 0px); */
 }

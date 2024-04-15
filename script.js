@@ -18,6 +18,14 @@ function move(notikums, atrums){
     if(notikums.keyCode == 65){
         paKreisi = atrums;
     }
+    if(notikums.keyCode == 87){
+        uzPrieksu = atrums;
+    }
+    if(notikums.keyCode == 83){
+        uzAtpakal = atrums;
+    }
+    //peles kods
+    console.log(notikums.movementX);
 }
 
 document.addEventListener("keydown", (event) => {
@@ -25,6 +33,9 @@ document.addEventListener("keydown", (event) => {
 });
 document.addEventListener("keyup", (event) => {
     this.move(event, 0);
+});
+document.addEventListener("mousemove", (event) => {
+    this.move(event, velocity);
 });
 
 function createNewWorld(wrld){
@@ -69,9 +80,10 @@ let herself = new player(100, 0, -400, -10, 0, 0);
 
 function updateWorld(speletajs){
     dx = paLabi - paKreisi;
-    console.log(dx);
+    dz = uzPrieksu - uzAtpakal;
 
     speletajs.x += dx;
+    speletajs.z += dz;
 
     pasaule.style.transform = `
         translateZ(600px)

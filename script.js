@@ -2,6 +2,7 @@ var pasaule = document.getElementById("world");
 
 var velocity = 7;
 var uzPrieksu = uzAtpakal = paLabi = paKreisi = 0;
+var mouseX = mouseY = 0;
 
 var map = [
 //x,y,z, rx, ry, rz, h, w, opacity, color
@@ -25,7 +26,13 @@ function move(notikums, atrums){
         uzAtpakal = atrums;
     }
     //peles kods
-    console.log(notikums.movementX);
+    console.log(`X: ${notikums.movementX}; Y : ${notikums.movementY}; poga: ${notikums.buttons}`);
+    // if(notikums.buttons == 1){
+    //         uzPrieksu = atrums;         
+    // }
+
+    mouseX = notikums.movementX;
+    mouseY = notikums.movementY;
 }
 
 document.addEventListener("keydown", (event) => {
@@ -82,8 +89,14 @@ function updateWorld(speletajs){
     dx = paLabi - paKreisi;
     dz = uzPrieksu - uzAtpakal;
 
+    dry = mouseX;
+
+    mouseX = 0;
+
     speletajs.x += dx;
     speletajs.z += dz;
+
+    speletajs.ry += dry;
 
     pasaule.style.transform = `
         translateZ(600px)

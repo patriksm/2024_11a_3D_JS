@@ -32,8 +32,6 @@ function moveMouse(notikums){
     mouseX = notikums.movementX;
     mouseY = notikums.movementY; 
 
-    console.log(`${mouseX}, ${mouseY}`)
-
 }
 
 document.addEventListener("keydown", (event) => {
@@ -102,15 +100,17 @@ function updateWorld(speletajs){
     pasaule.style.transform = `
         translateZ(600px)
 
+        rotateX(${speletajs.rx}deg)
+        rotateY(${speletajs.ry}deg)
+        rotateZ(${speletajs.rz}deg)
+
         translate3d(
             ${-speletajs.x}px, 
             ${speletajs.y}px, 
             ${speletajs.z}px
         )
     
-        rotateX(${speletajs.rx}deg)
-        rotateY(${speletajs.ry}deg)
-        rotateZ(${speletajs.rz}deg)
+        
     `;
 }
 

@@ -25,14 +25,15 @@ function move(notikums, atrums){
     if(notikums.keyCode == 83){
         uzAtpakal = atrums;
     }
-    //peles kods
-    console.log(`X: ${notikums.movementX}; Y : ${notikums.movementY}; poga: ${notikums.buttons}`);
-    // if(notikums.buttons == 1){
-    //         uzPrieksu = atrums;         
-    // }
+}
 
+function moveMouse(notikums){
+    
     mouseX = notikums.movementX;
-    mouseY = notikums.movementY;
+    mouseY = notikums.movementY; 
+
+    console.log(`${mouseX}, ${mouseY}`)
+
 }
 
 document.addEventListener("keydown", (event) => {
@@ -42,7 +43,7 @@ document.addEventListener("keyup", (event) => {
     this.move(event, 0);
 });
 document.addEventListener("mousemove", (event) => {
-    this.move(event, velocity);
+    this.moveMouse(event);
 });
 
 function createNewWorld(wrld){
